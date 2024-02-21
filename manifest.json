@@ -1,0 +1,34 @@
+{
+    "components": [
+        {
+            "id": "project-creation-java",
+            "type": "core",
+            "programs": [
+                {
+                    "id": "create-project",
+                    "description": "Creates a new uProtocol project",
+                    "executable": "python",
+                    "args": "components/project-creation/integration/run.py"
+                }
+            ],
+            "variables": [
+                {
+                    "id": "language",
+                    "description": "Programming language of the project.",
+                    "type": "string",
+                    "scope": "project",
+                    "constant": true,
+                    "default": "java"
+                }
+            ]
+        },
+        {
+            "id": "devcontainer-setup-java",
+            "type": "extension",
+            "compatibleCores": [
+                "project-creation-java"
+            ],
+            "mandatory": true
+        }
+    ]
+}

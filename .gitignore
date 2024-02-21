@@ -1,0 +1,6 @@
+target/
+.DS_Store
+.cli/
+.velocitas/
+.vscode/settings.json
+.attach*
