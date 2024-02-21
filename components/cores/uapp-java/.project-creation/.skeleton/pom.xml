@@ -24,12 +24,13 @@
         <revision>0.1</revision>
 
         <junit.platform.version>1.9.1</junit.platform.version>
-        <junit-jupiter.version>5.9.1</junit-jupiter.version>
+        <junit-jupiter.version>5.10.2</junit-jupiter.version>
         <junit.version>4.12</junit.version>
         <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
 
-        <uprotocol-core-api.version>1.5.2</uprotocol-core-api.version>
-        <uprotocol-java.version>1.5.4</uprotocol-java.version>
+        <uprotocol-core-api.version>1.5.6</uprotocol-core-api.version>
+        <uprotocol-java.version>1.5.5</uprotocol-java.version>
+        <uservices-api.path>/workspaces/pkg-velocitas-uprotocol/components/cores/uapp-java/uservices/uservices-api-0.1.0-SNAPSHOT.jar</uservices-api.path>
         <slf4j.version>2.6.18</slf4j.version>
     </properties>
 
@@ -151,9 +152,8 @@
             <artifactId>uservice</artifactId>
             <version>0.1.0</version>
             <scope>system</scope>
-            <systemPath>/workspaces/velocitas-uprotocol-java/components/uservices/uservices-api-0.1.0-SNAPSHOT.jar</systemPath>
+            <systemPath>${uservices-api.path}</systemPath>
         </dependency>
-
 
         <!--JUnit
         Jupiter Engine to depend on the JUnit5 engine and JUnit 5 API -->
@@ -163,9 +163,7 @@
             <version>${junit-jupiter.version}</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
-
 
     <dependencyManagement>
         <dependencies>
@@ -174,8 +172,6 @@
                 <artifactId>protobuf-java</artifactId>
                 <version>3.16.3</version>
             </dependency>
-
         </dependencies>
-
     </dependencyManagement>
 </project>
