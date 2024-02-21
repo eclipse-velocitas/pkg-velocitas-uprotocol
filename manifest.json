@@ -30,7 +30,7 @@
             "id": "devcontainer-setup-java",
             "type": "extension",
             "compatibleCores": [
-                "project-creation-java"
+                "uprotocol-core-java"
             ],
             "mandatory": true
         }
