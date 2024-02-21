@@ -1,4 +1,4 @@
-# Velocitas uProtocol Support pacakge
+# Velocitas uProtocol Support package
 
 This repository is supposed to be used as a self-contained [Velocitas toolchain package](https://github.com/eclipse-velocitas/cli/blob/main/docs/features/PACKAGES.md) which enables
 the development of uProtocol applications and services (uApps and uServices). No further Velocitas packages are needed to develop uApps and uServices.
