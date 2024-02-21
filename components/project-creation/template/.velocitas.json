@@ -1,0 +1,10 @@
+{
+    "packages": [
+        {
+            "name": "velocitas-uprotocol-core",
+            "version": "latest"
+        }
+    ],
+    "variables": {},
+    "cliVersion": "v0.6.3"
+}

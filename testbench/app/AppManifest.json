@@ -1,0 +1,12 @@
+{
+    "manifestVersion": "v3",
+    "name": "My testable uApp",
+    "interfaces": [
+        {
+            "type": "service-catalogue-consumer",
+            "config": {
+                "src": "https://github.com/COVESA/uservices.git"
+            }
+        }
+    ]
+}
