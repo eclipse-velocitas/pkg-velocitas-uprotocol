@@ -16,10 +16,18 @@ The package is structured as follows, please follow the links for a detailed des
 * $root/
     * 📁 components/
         * 📁 cores/
-            * [project-creation-java](./components/cores/project-creation-java/README.md)/
-                * 📁 scripts/
-                    * 📄 create.py
-                * 📁 templates/
+            * [uapp-java](./components/cores/uapp-java/README.md)/
+                * 📁 .project-creation/
+                    * 📁 .skeleton/
+                        * 📁 src/
+                    * 📁 examples/
+                        * 📁 horn-activator/
+                            * 📁 src/
+                    * 📁 templates/
+                    * 📁 test/
+                    * 📄 config.json
+                    * 📄 run.py
+                * 📁 uservices/
         * 📁 extensions/
             * 📁 [devcontainer-setup-java](./components/extensions/devcontainer-setup-java/README.md)/
             * 📁 [github-workflows](./components/extensions/github-workflows/README.md)/

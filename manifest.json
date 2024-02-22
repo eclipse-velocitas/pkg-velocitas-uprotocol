@@ -1,19 +1,23 @@
 {
     "components": [
         {
-            "id": "project-creation-java",
+            "id": "uprotocol-core-java",
+            "name": "uProtocol App/Service (Java)",
+            "description": "uProtocol App/Service written in Java",
             "type": "core",
             "programs": [
                 {
                     "id": "create-project",
                     "description": "Creates a new uProtocol project",
                     "executable": "python",
-                    "args": "components/project-creation/integration/run.py"
+                    "args": [
+                        "components/cores/uapp-java/.project-creation/run.py"
+                    ]
                 }
             ],
             "variables": [
                 {
-                    "id": "language",
+                    "name": "language",
                     "description": "Programming language of the project.",
                     "type": "string",
                     "scope": "project",
@@ -26,7 +30,7 @@
             "id": "devcontainer-setup-java",
             "type": "extension",
             "compatibleCores": [
-                "project-creation-java"
+                "uprotocol-core-java"
             ],
             "mandatory": true
         }

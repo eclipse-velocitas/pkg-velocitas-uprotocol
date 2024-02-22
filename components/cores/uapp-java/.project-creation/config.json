@@ -1,0 +1,7 @@
+{
+    "files": [
+        ".pre-commit-config.yaml",
+        ".project-creation/templates/.devcontainer/devcontainer.json",
+        ".project-creation/templates/.vscode/launch.json"
+    ]
+}

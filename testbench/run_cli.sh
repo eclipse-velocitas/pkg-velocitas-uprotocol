@@ -13,7 +13,7 @@ if [ ! -e "${CLI_FOLDER}" ]; then
 fi
 
 cd $CLI_FOLDER
-git switch feature/core-and-ext-pkg
+git switch feature/modularity
 cp testbench/test-create/vehicle-app-template/package-index.json ../package-index.json
 
 if [ ! hash node &> /dev/null ]; then

@@ -1,7 +1,7 @@
 {
     "packages": [
         {
-            "name": "velocitas-uprotocol-core",
+            "name": "pkg-velocitas-uprotocol",
             "version": "latest"
         }
     ],
