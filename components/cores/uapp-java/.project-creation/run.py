@@ -26,6 +26,7 @@ PROJECT_CREATION_EXAMPLES_DIR = ".project-creation/examples/"
 PROJECT_CREATION_SKELETON_DIR = ".project-creation/.skeleton/"
 DEFAULT_VEHICLE_APP_NAME = "vehicle_app"
 JAVA_OUTPUT_DIR = "target"
+GIT_DIR = ".git"
 
 def get_core_dir_path() -> str:
     return os.path.join(Path(os.path.dirname(__file__)).parent)
@@ -70,7 +71,7 @@ def copy_files(creation_files: list, root_destination: str) -> None:
 
 
 def _filter_hidden_files(_: str, dir_contents: List[str]) -> Iterable[str]:
-    hidden_files = [".git"]
+    hidden_files = [GIT_DIR]
     return filter(lambda file: file in hidden_files, dir_contents)
 
 
@@ -134,6 +135,8 @@ def sanitize_name(name: str) -> str:
 def replace_app_name(creation_name: str, destination_repo: str) -> None:
     creation_name = sanitize_name(creation_name)
     for root, dirs, files in os.walk(destination_repo):
+        if GIT_DIR in dirs:
+            dirs.remove(GIT_DIR)
         if JAVA_OUTPUT_DIR in dirs:
             dirs.remove(JAVA_OUTPUT_DIR)
         for name in dirs[:]:
