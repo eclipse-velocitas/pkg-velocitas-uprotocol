@@ -20,12 +20,12 @@
 		"ghcr.io/devcontainers-contrib/features/pre-commit:2": {
 			"version": "3.5.0"
 		},
-		"ghcr.io/devcontainers/features/common-utils:2.3.2": {},
+		"ghcr.io/devcontainers/features/common-utils:2.3.2": {}
 	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "",
+	"onCreateCommand": "bash .devcontainer/scripts/onCreateCommand.sh",
+	"postStartCommand": "bash .devcontainer/scripts/postStartCommand.sh",
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {

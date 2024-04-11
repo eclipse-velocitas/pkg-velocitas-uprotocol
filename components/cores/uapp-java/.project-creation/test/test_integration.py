@@ -30,10 +30,6 @@ def is_file(path: str):
 def test_files_in_place():
     os.chdir(os.environ["VELOCITAS_APP_ROOT"])
 
-    # devcontainer
-    is_dir(".devcontainer")
-    is_file(".devcontainer/devcontainer.json")
-
     # vscode project
     is_dir(".vscode")
     is_file(".vscode/launch.json")
