@@ -32,6 +32,12 @@
             "compatibleCores": [
                 "uprotocol-core-java"
             ],
+            "files": [
+                {
+                    "src": "components/extensions/devcontainer-setup-java/src",
+                    "dst": "."
+                }
+            ],
             "mandatory": true
         }
     ]
