@@ -21,7 +21,7 @@ ROOT_DIRECTORY=$( realpath "$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P 
 DESIRED_VERSION=$(cat $ROOT_DIRECTORY/.velocitas.json | jq .cliVersion | tr -d '"')
 
 # Get installed CLI version
-INSTALLED_VERSION=v$(velocitas --version | sed -E 's/velocitas-cli\/(\w+.\w+.\w+).*/\1/')
+INSTALLED_VERSION=v$(velocitas --version | sed -E 's/velocitas-cli\/(\w+.\w+.\w+).*/\1/') > /dev/null 2>&1
 
 if [ "$DESIRED_VERSION" = "$INSTALLED_VERSION" ]; then
   echo "> Already up to date!"
