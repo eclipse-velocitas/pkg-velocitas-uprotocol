@@ -13,12 +13,15 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-SCRIPT_DIRECTORY=$( realpath "$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )" )
+echo "#######################################################"
+echo "### Run Velocitas Lifecycle Management              ###"
+echo "#######################################################"
+# needed to get rid of old leftovers
+sudo rm -rf ~/.velocitas
+velocitas init
+velocitas sync
 
-# fix ownership issues
-sudo chown -R $(whoami) $HOME
-
-# fix git issues
-git config --global --add safe.directory "*"
-
-bash ${SCRIPT_DIRECTORY}/setup_codespaces.sh
+echo "#######################################################"
+echo "### Velocitas toolchain package status              ###"
+echo "#######################################################"
+velocitas upgrade --dry-run
